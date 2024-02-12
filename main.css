@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image:url(img/candi1.jpg); 
+    background-size:cover; 
+    background-attachment: fixed;
+}
+
+a {
+    position: relative;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    font-size: 1.5em;
+    letter-spacing: .1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    padding: 10px 30px;
+    transition: .5s;
+    transition-delay: .8s;
+}
+
+a:hover {
+    color: white;
+    letter-spacing: .25em;
+    text-shadow: 0 0 5px white;
+    transition-delay: 1ms;
+}
+
+a span {
+    position: absolute;
+    display: block;
+    background: white;
+    box-shadow: 0 0 5px white;
+}
+
+a span:nth-child(1) {
+    left: 0;
+    top: 0;
+    width: 50.5%;
+    height: 1.5px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .5s;
+}
+
+a:hover span:nth-child(1) {
+    transform: scaleX(1);
+    transform-origin: right;
+}
+
+a span:nth-child(2) {
+    right: 0;
+    top: 0;
+    width: 50.5%;
+    height: 1.5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+a:hover span:nth-child(2) {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+a span:nth-child(3) {
+    right: 0;
+    top: 0;
+    width: 1.5px;
+    height: 100%;
+    transform-origin: bottom;
+    transform: scaleY(0);
+    transition: transform .5s;
+    transition-delay: .4s;
+}
+
+a:hover span:nth-child(3) {
+    transform: scaleX(1);
+    transform-origin: top;
+}
+
+a span:nth-child(4) {
+    left: 0;
+    top: 0;
+    width: 1.5px;
+    height: 100%;
+    transform-origin: bottom;
+    transform: scaleY(0);
+    transition: transform .5s;
+    transition-delay: .4s;
+}
+
+a:hover span:nth-child(4) {
+    transform: scaleX(1);
+    transform-origin: top;
+}
+
+a span:nth-child(5) {
+    left: 0;
+    bottom: 0;
+    width: 50.5%;
+    height: 1.5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+    transition-delay: .8s;
+}
+
+a:hover span:nth-child(5) {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+a span:nth-child(6) {
+    right: 0;
+    bottom: 0;
+    width: 50.5%;
+    height: 1.5px;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform .5s;
+    transition-delay: .8s;
+}
+
+a:hover span:nth-child(6) {
+    transform: scaleX(1);
+    transform-origin: right;
+}
+
+#tooltipText {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    background-color: #8f8e88;
+    color: rgb(255, 255, 255);
+    white-space: nowrap;
+    padding: 10px 15px;
+    border-radius: 7px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    
+}
+
+#tooltipText::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    border: 15px solid;
+    border-color: #8f8e88 #0000 #0000 #0000;
+}
+
+#tooltip:hover #tooltipText{
+    top: -130%;
+    visibility: visible;
+    opacity: 1;
+}
+
+#tooltip:active {
+    transform: scale(0.96)
+}
+
+#dropDownNino {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    
+}
+
+#dropDownNino.active {
+    display: block;
+    background: #262c37;
+}
+
+ul li > a {
+    position: relative;
+    display: inline-block;
+    color: rgba(255, 255, 255, .4);
+    font-size: 1.5em;
+    letter-spacing: .1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    
+    padding: 10px 30px;
+    transition: .5s;
+    transition-delay: .8s;
+}
+
+ul li:hover {
+    color: #00eeff;
+    letter-spacing: .25em;
+    text-shadow: 0 0 5px #00eeff;
+    
+}
